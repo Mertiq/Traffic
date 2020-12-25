@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class CarLoad : MonoBehaviour
 {
-    public Transform[] wayPoints;
+    public int carCount;
+    public GameObject[] wayPoints;
     public GameObject[] cars;
-    Vector3[] waypointPos = { new Vector3(-15f, 0, 950f), new Vector3(0, 0, 950f), new Vector3(15f, 0, 950f) };
+    Vector3[] waypointPos = { new Vector3(-15f, 0, 9500f), new Vector3(0, 0, 9500f), new Vector3(15f, 0, 9500f) };
 
     public GameObject player;
     public Transform playersWayPoint;
     Vector3 playerPos = new Vector3(0, 1.1f, -30f);
 
+    public GameObject parentCar;
+    public GameObject parentLine;
+    public GameObject parentWaypoint;
+    public GameObject line;
 
     float distance = 35f;
 
@@ -27,38 +32,49 @@ public class CarLoad : MonoBehaviour
         Camera.main.GetComponent<FollowPlayer>().player = x;
         for (int i = 0; i < 3; i++)
         {
-            Instantiate(wayPoints[i], waypointPos[i], Quaternion.identity);
+            GameObject xa =(GameObject) Instantiate(wayPoints[i], waypointPos[i], Quaternion.identity);
+            xa.transform.SetParent(parentWaypoint.transform);
         }
         
-        for (int i = 1; i < 50; i++)
+        for (int i = 1; i < carCount; i++)
         {
             int rand = Random.Range(1, 4);
-            if(rand == 1)
+            Debug.Log("araba " + rand);
+            if (rand == 1)
             {
                 int rand2 = Random.Range(0, cars.Length);
                 Vector3 pos = new Vector3(-15f, 1.1f, i * distance);
-                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1];
-                Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1].transform;
+                GameObject xa = (GameObject) Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                xa.transform.SetParent(parentCar.transform);
             }
             else if (rand == 2)
             {
                 int rand2 = Random.Range(0, cars.Length);
                 Vector3 pos = new Vector3(0, 1.1f, i * distance);
-                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1];
-                Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1].transform;
+                GameObject xa = (GameObject)Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                xa.transform.SetParent(parentCar.transform);
             }
             else if (rand == 3)
             {
                 int rand2 = Random.Range(0, cars.Length);
                 Vector3 pos = new Vector3(15f, 1.1f, i * distance);
-                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1];
-                Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                cars[rand2].GetComponent<AIMovement>().wayPoint = wayPoints[rand-1].transform;
+                GameObject xa = (GameObject)Instantiate(cars[rand2], pos, cars[rand2].transform.rotation);
+                xa.transform.SetParent(parentCar.transform);
             }
+        }
+
+        for (int i = 0; i < 333; i++)
+        {
+            Vector3 pos1 = new Vector3(-8f,.5f,-90 + (30 * i));
+            Vector3 pos2 = new Vector3(8f, .5f,-90 + (30 * i));
+            GameObject xa = (GameObject)Instantiate(line, pos1, Quaternion.identity);
+            GameObject xb = (GameObject)Instantiate(line, pos2, Quaternion.identity);
+            xa.transform.SetParent(parentLine.transform);
+            xb.transform.SetParent(parentLine.transform);
         }
     }
 
-    private void Update()
-    {
-        
-    }
 }

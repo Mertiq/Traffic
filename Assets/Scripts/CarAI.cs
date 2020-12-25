@@ -17,6 +17,14 @@ public class CarAI : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Car"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void DestroyCar()
     {
         Destroy(gameObject);

@@ -73,8 +73,8 @@ GameObject:
   - component: {fileID: 6237605891348596611}
   - component: {fileID: 6237605891348596610}
   m_Layer: 0
-  m_Name: green car
-  m_TagString: Untagged
+  m_Name: black car
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,8 +154,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.4521713, y: 10.810683, z: 2.8106794}
-  m_Center: {x: 0, y: 0.0000004768373, z: 1.4054873}
+  m_Size: {x: 3.799329, y: 9.390926, z: 1.9099987}
+  m_Center: {x: 0.0068713427, y: 0.070869446, z: 1.158959}
 --- !u!54 &6237605891348596620
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198,9 +198,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  wayPoint:
-  - {fileID: 3872446853322436908, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
-  - {fileID: 1746015338649905693, guid: 33d5b81e9307d224f801267dead6e951, type: 3}
-  - {fileID: 6224352255682929576, guid: 5208dc4cde7e72341a9d32a15630157c, type: 3}
-  wayPointIndex: 0
+  wayPoint: {fileID: 3872446853322436908, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
   slowDown: 0

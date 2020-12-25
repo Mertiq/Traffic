@@ -32,7 +32,7 @@ public class AIMovement : MonoBehaviour
     }
     void SpeedUp()
     {
-        speed += Time.deltaTime;
+        speed += .5f*Time.deltaTime;
     }
 
 }

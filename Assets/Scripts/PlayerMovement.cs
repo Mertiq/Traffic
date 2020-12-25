@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 15f;
     readonly float rightOffset = 15f;
     readonly float leftOffset = -15f;
-    public float sideSpeed = 25f;
+    public float sideSpeed = 40f;
 
     public Transform waypoint;
 
@@ -16,17 +16,22 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         StayInside();
-        
-        MoveForward();
+
+        MoveForwardBackward();
 
         MoveLeftRight();
 
-        if (Input.GetKey(KeyCode.DownArrow))
-            SpeedDown();
-        else
-            SpeedUp();
-       
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Car"))
+        {
+            Debug.Log("you hit a car!");
+        }
+    }
+
+
 
     void StayInside()
     {
@@ -56,22 +61,29 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void MoveForward()
+    void MoveForwardBackward()
     {
-        if(speed > 4)
+        if(Input.GetKey(KeyCode.UpArrow))
         {
-            Vector3 dir = new Vector3(0,0, waypoint.position.z - transform.position.z);
-            transform.Translate(dir.normalized * Time.deltaTime * speed, Space.World);
+            SpeedUp();
         }
+        else
+        {
+            if(speed >= 1)
+                SpeedDown();
+        }
+        Vector3 dir = new Vector3(0, 0, waypoint.position.z - transform.position.z);
+        transform.Translate(dir.normalized * Time.deltaTime * speed, Space.World);
+
     }
+
     void SpeedDown()
     {
-        if(speed > 4.1)
-            speed -= 0.03f;
+        speed -= 5*Time.deltaTime;
     }
 
     void SpeedUp()
     {
-        speed += 0.03f;
+        speed += 4*Time.deltaTime;
     }
 }
