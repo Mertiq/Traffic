@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\AIMovement.cs" />
     <Compile Include="Assets\Scripts\CarAI.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Bulding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

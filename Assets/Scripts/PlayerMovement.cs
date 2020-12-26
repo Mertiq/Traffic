@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
    
 
-    void Update()
+    void FixedUpdate()
     {
         StayInside();
 
@@ -21,6 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
         MoveLeftRight();
 
+        Finish();
+    }
+
+    void Finish()
+    {
+        if(waypoint.position.z <= transform.position.z)
+        {
+            Debug.Log("FINISH");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -74,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
         }
         Vector3 dir = new Vector3(0, 0, waypoint.position.z - transform.position.z);
         transform.Translate(dir.normalized * Time.deltaTime * speed, Space.World);
-
     }
 
     void SpeedDown()

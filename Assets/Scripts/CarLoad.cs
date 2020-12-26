@@ -18,6 +18,9 @@ public class CarLoad : MonoBehaviour
     public GameObject parentWaypoint;
     public GameObject line;
 
+    public GameObject buildingPrefab;
+    public GameObject buildingParent;
+
     float distance = 35f;
 
     private void Awake()
@@ -75,6 +78,18 @@ public class CarLoad : MonoBehaviour
             xa.transform.SetParent(parentLine.transform);
             xb.transform.SetParent(parentLine.transform);
         }
+        /*
+        for (int i = 0; i < 35; i++)
+        {
+            Vector3 pos1 = new Vector3(-32f, -15f, 65 + (285 * i));
+            Vector3 pos2 = new Vector3(32f, -15f, 65 + (285 * i));
+            GameObject xa = (GameObject)Instantiate(buildingPrefab, pos1, buildingPrefab.transform.rotation);
+            GameObject xb = (GameObject)Instantiate(buildingPrefab, pos2, buildingPrefab.transform.rotation);
+            xb.transform.Rotate(new Vector3(0f, -180f, 0));
+            xa.transform.SetParent(buildingParent.transform);
+            xb.transform.SetParent(buildingParent.transform);
+        }
+        */
     }
 
 }
