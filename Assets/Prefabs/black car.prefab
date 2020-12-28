@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317508407926104317}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalPosition: {x: 0, y: -20, z: 1.24}
   m_LocalScale: {x: 1, y: 0.49999988, z: 2.4999995}
   m_Children: []
   m_Father: {fileID: 6763207270962027835}
@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.3}
+  m_Size: {x: 2.1908789, y: 0.5, z: 5.882408}
+  m_Center: {x: 0.0064823627, y: 0, z: -2.741204}
 --- !u!114 &2392012863762963671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +70,8 @@ GameObject:
   - component: {fileID: 5589127609290597972}
   - component: {fileID: 6237605891348596621}
   - component: {fileID: 6237605891348596620}
-  - component: {fileID: 6237605891348596611}
+  - component: {fileID: 7572291476070236208}
+  - component: {fileID: 5758220406616977841}
   - component: {fileID: 6237605891348596610}
   m_Layer: 0
   m_Name: black car
@@ -172,7 +173,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
---- !u!114 &6237605891348596611
+--- !u!114 &7572291476070236208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,10 +182,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6237605891348596609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911a200f7e72afe4d84facf14557f0b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6afb49bc6ae492f408e01ce9e2b97b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoint: {fileID: 3872446853322436908, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
+  is_AI: 1
+  is_player: 0
+  waypoint: {fileID: 3872446853322436907, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
+--- !u!114 &5758220406616977841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237605891348596609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8845a924bcf6c46a2d3eff98fe312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6237605891348596610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +213,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  wayPoint: {fileID: 3872446853322436908, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
-  slowDown: 0
+  slow_down: 0

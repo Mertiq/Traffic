@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6334489669299387751}
   - component: {fileID: 6334489669299387769}
   - component: {fileID: 6334489669299387750}
+  - component: {fileID: -7483946491663248579}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -125,6 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e627776f5953b284b89f5870a45801f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 13
-  sideSpeed: 40
-  waypoint: {fileID: 1746015338649905693, guid: 33d5b81e9307d224f801267dead6e951, type: 3}
+--- !u!114 &-7483946491663248579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569002650681993123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afb49bc6ae492f408e01ce9e2b97b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_AI: 0
+  is_player: 1
+  waypoint: {fileID: 3872446853322436907, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}

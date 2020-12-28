@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
+    public static GameObject player_prefab;
 
-    void Update()
+    void LateUpdate()
     {
-        Vector3 pos = new Vector3(0f, player.transform.position.y, player.transform.position.z); 
+        Vector3 pos = new Vector3(0f, player_prefab.transform.position.y, player_prefab.transform.position.z); 
         transform.position = pos + new Vector3(0, 49f, -45f);
     }
 }

@@ -57,12 +57,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-    <Compile Include="Assets\Scripts\CarLoad.cs" />
-    <Compile Include="Assets\Scripts\AIFrontCollision.cs" />
-    <Compile Include="Assets\Scripts\AIMovement.cs" />
-    <Compile Include="Assets\Scripts\CarAI.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Bulding.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOver.cs" />
+    <Compile Include="Assets\Scripts\UI\Buttons.cs" />
+    <Compile Include="Assets\Scripts\Load\Load_Line.cs" />
+    <Compile Include="Assets\Scripts\Load\Load_Car.cs" />
+    <Compile Include="Assets\Scripts\UI\TimeManagement.cs" />
+    <Compile Include="Assets\Scripts\Load\Load_Building.cs" />
+    <Compile Include="Assets\Scripts\UI\SliderControl.cs" />
+    <Compile Include="Assets\Scripts\AI\AIFrontCollision.cs" />
+    <Compile Include="Assets\Scripts\Load\Load_Waypoint.cs" />
+    <Compile Include="Assets\Scripts\Objects\Car.cs" />
+    <Compile Include="Assets\Scripts\AI\AIMovement.cs" />
+    <Compile Include="Assets\Scripts\Load\Load_Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Take_Input.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

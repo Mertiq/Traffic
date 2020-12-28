@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1723472453402914434}
   - component: {fileID: 7973298368369427621}
   - component: {fileID: 523574955298890018}
-  - component: {fileID: 6116687265702540404}
+  - component: {fileID: -7313526990942987851}
+  - component: {fileID: -7139451778040689319}
   - component: {fileID: 7378388665817654641}
   m_Layer: 0
   m_Name: grey car
@@ -115,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
---- !u!114 &6116687265702540404
+--- !u!114 &-7313526990942987851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,10 +125,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 931116339222794071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911a200f7e72afe4d84facf14557f0b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6afb49bc6ae492f408e01ce9e2b97b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoint: {fileID: 3872446853322436908, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
+  is_AI: 1
+  is_player: 0
+  waypoint: {fileID: 3872446853322436907, guid: a420ae07a45744142989d8a9856b7f6b, type: 3}
+--- !u!114 &-7139451778040689319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931116339222794071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8845a924bcf6c46a2d3eff98fe312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7378388665817654641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  wayPoint: {fileID: 6224352255682929576, guid: 5208dc4cde7e72341a9d32a15630157c, type: 3}
-  slowDown: 0
+  slow_down: 0
 --- !u!1 &1727157465614811095
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727157465614811095}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -10, z: -0}
+  m_LocalPosition: {x: 0, y: -20, z: 1.34}
   m_LocalScale: {x: 1, y: 0.49999988, z: 2.4999995}
   m_Children: []
   m_Father: {fileID: 549489508893038061}
@@ -186,8 +200,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.3}
+  m_Size: {x: 2.1908789, y: 0.5, z: 5.882408}
+  m_Center: {x: 0.0064823627, y: 0, z: -2.741204}
 --- !u!114 &6900560307658941655
 MonoBehaviour:
   m_ObjectHideFlags: 0
