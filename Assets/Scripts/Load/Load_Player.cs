@@ -23,6 +23,7 @@ public class Load_Player : MonoBehaviour
         GameObject player = Instantiate(player_prefab, player_pos, player_prefab.transform.rotation);
         FollowPlayer.player_prefab = player;
         SliderControl.player_prefab = player;
+        Score.player = player;
     }
 
 }
