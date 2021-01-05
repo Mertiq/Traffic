@@ -11,7 +11,6 @@ public class TimeManagement : MonoBehaviour
     public static float currentTime = 0;
 
     public Text currentTimeText;
-    public Text finalTimeText;
 
     private void Start()
     {
@@ -28,10 +27,6 @@ public class TimeManagement : MonoBehaviour
                 GameOver.gameOver = true;
             }
         }
-        currentTimeText.text = Math.Round(currentTime, 1).ToString();
-        if(!GameOver.gameOver)
-        {
-            finalTimeText.text = Math.Round(currentTime, 1).ToString();
-        }
+        currentTimeText.text = "Time: " + Math.Round(currentTime, 1).ToString();
     }
 }

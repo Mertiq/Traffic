@@ -30,6 +30,7 @@ public class Car : MonoBehaviour
             {
                 if (!GameOver.gameOver)
                 {
+                    GameOver.gameWin = true;
                     GameOver.gameOver = true;
                 }
             }

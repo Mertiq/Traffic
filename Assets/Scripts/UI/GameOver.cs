@@ -11,10 +11,12 @@ public class GameOver : MonoBehaviour
     public Canvas gameCanvas;
 
     public static bool gameOver = false;
+    public static bool gameWin = false;
 
     private void Start()
     {
         gameOver = false;
+        gameWin = false;
     }
 
     void Update()
