@@ -11,4 +11,5 @@ public class Buttons : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         GameOver.gameOver = false;
     }
+
 }

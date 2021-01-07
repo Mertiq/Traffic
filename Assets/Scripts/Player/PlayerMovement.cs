@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool move_left = false;
     public static bool move_right = false;
+    public static bool speed_up = false;
+    public static bool speed_down = false;
 
     private void Start()
     {
@@ -23,7 +25,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         StayInside();
-        MoveForward();
+        if(!GameOver.gameOver)
+            MoveForward();
+
+        if (speed_up)
+            SpeedUp();
+
+        if (speed_down)
+            SpeedDown();
 
         if (move_left)
         {

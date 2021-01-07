@@ -6,8 +6,8 @@ public class Load_Building : MonoBehaviour
 {
     [Header("variables")]
     public int building_quantity = 33;
-    public Vector3 building_left_pos = new Vector3(-32f, -15f, 65);
-    public Vector3 building_right_pos = new Vector3(32f, -15f, 65);
+    public Vector3 building_left_pos = new Vector3(-24f, -4f, 0);
+    public Vector3 building_right_pos = new Vector3(24f, -4f, 0);
 
     public GameObject building_prefab;
     public GameObject building_parent;
@@ -15,8 +15,8 @@ public class Load_Building : MonoBehaviour
     private void Awake()
     {
         building_quantity = 33;
-        building_left_pos = new Vector3(-32f, -15f, 65);
-        building_right_pos = new Vector3(32f, -15f, 65);
+        building_left_pos = new Vector3(-24f, -4f, 0);
+        building_right_pos = new Vector3(24f, -4f, 0);
         Load();
     }
 

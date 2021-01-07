@@ -32,4 +32,38 @@ public class Take_Input : MonoBehaviour
             PlayerMovement.move_left= false;
         }
     }
+
+    public void GasDown()
+    {
+        PlayerMovement.speed_up = true;
+    }
+    public void GasUp()
+    {
+        PlayerMovement.speed_up = false;
+    }
+    public void BreakDown()
+    {
+        if (PlayerMovement.speed >= 1)
+            PlayerMovement.speed_down = true;
+    }
+    public void BreakUp()
+    {
+        PlayerMovement.speed_down = false;
+    }
+    public void RightDown()
+    {
+        PlayerMovement.MoveRight();
+    }
+    public void RightUp()
+    {
+        PlayerMovement.move_right = false;
+    }
+    public void LeftDown()
+    {
+        PlayerMovement.MoveLeft();
+    }
+    public void LeftUp()
+    {
+        PlayerMovement.move_left = false;
+    }
 }
