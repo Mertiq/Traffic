@@ -14,7 +14,6 @@ public class Load_Building : MonoBehaviour
 
     private void Awake()
     {
-        building_quantity = 33;
         building_left_pos = new Vector3(-24f, -4f, 0);
         building_right_pos = new Vector3(24f, -4f, 0);
         Load();

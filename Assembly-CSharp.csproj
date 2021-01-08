@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\AI\AIMovement.cs" />
     <Compile Include="Assets\Scripts\Load\Load_Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Menu\MenuButtonControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

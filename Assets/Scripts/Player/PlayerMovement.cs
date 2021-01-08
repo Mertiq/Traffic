@@ -86,11 +86,14 @@ public class PlayerMovement : MonoBehaviour
 
     public static void SpeedDown()
     {
-        speed -= 5*Time.deltaTime;
+        if(speed >= 1)
+        {
+            speed -= 15* Time.deltaTime;
+        }
     }
 
     public static void SpeedUp()
     {
-        speed += 4*Time.deltaTime;
+        speed += 5*Time.deltaTime;
     }
 }
