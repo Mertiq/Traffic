@@ -24,5 +24,3 @@ You can play the game in sample scene in Unity or if you have an android mobile 
 ## Acknowledgments
 
 * [Mertiq](https://github.com/Mertiq)
-
-![](https://gifs.com/gif/xnpVzl?muted=false)
