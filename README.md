@@ -25,4 +25,4 @@ You can play the game in sample scene in Unity or if you have an android mobile 
 
 * [Mertiq](https://github.com/Mertiq)
 
-![](https://j.gifs.com/xnpVzl.gif)
+![x](https://j.gifs.com/xnpVzl.gif)
